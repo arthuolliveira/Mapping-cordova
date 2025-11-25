@@ -5,7 +5,10 @@
   "description": "A sample Apache Cordova application that responds to the deviceready event.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cordova": "cordova",
+    "run-browser": "cordova run browser",
+    "run-android": "cordova run android"
   },
   "keywords": [
     "ecosystem:cordova"
@@ -14,11 +17,17 @@
   "license": "Apache-2.0",
   "cordova": {
     "platforms": [
-      "android"
-    ]
+      "android",
+      "browser"
+    ],
+    "plugins": {
+      "cordova-plugin-geolocation": {}
+    }
   },
   "devDependencies": {
     "cordova": "^13.0.0",
-    "cordova-android": "^14.0.1"
+    "cordova-android": "^14.0.1",
+    "cordova-browser": "^7.0.0",
+    "cordova-plugin-geolocation": "^4.1.0"
   }
 }
