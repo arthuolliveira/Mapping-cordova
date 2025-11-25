@@ -1,4 +1,43 @@
 document.addEventListener('deviceready', onDeviceReady, false);
+// --- Controle de Permissão de Localização ---
+
+document.addEventListener('deviceready', () => {
+    checkAndRequestLocationPermission();
+});
+
+function checkAndRequestLocationPermission() {
+    const alreadyAsked = localStorage.getItem("gpsPermissionAsked");
+
+    if (alreadyAsked === "true") {
+        console.log("Permissão já foi solicitada anteriormente.");
+        return;
+    }
+
+    askForLocation();
+}
+
+function askForLocation() {
+    if (!navigator.geolocation) {
+        console.warn("Geolocalização não suportada.");
+        return;
+    }
+
+    navigator.geolocation.getCurrentPosition(
+        (pos) => {
+            console.log("Localização obtida:", pos.coords);
+            localStorage.setItem("gpsPermissionAsked", "true");
+        },
+        (err) => {
+            console.warn("Erro ao obter localização:", err);
+            localStorage.setItem("gpsPermissionAsked", "true");
+        },
+        {
+            enableHighAccuracy: true,
+            timeout: 10000,
+            maximumAge: 0
+        }
+    );
+}
 
 function onDeviceReady() {
     console.log('Cordova está pronto!');
@@ -251,9 +290,4 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleFloorList(); 
         });
     });
-});
-
-// Pedido de permissão para localização (location.js)
-document.addEventListener("DOMContentLoaded", () => {
-    requestLocation();
 });
