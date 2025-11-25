@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.seunome.meuapp" version="1.0.0" xmlns="http://www.w3.org/ns/widgets">
+
+<widget id="com.seunome.meuapp" version="1.0.0" 
+xmlns="http://www.w3.org/ns/widgets"
+xmlns:cdv="http://cordova.apache.org/ns/1.0">
+
     <name>Meu App</name>
     <description>Descrição do meu aplicativo</description>
     <author email="seu@email.com" href="http://seusite.com">Seu Nome</author>
@@ -15,4 +19,8 @@
     <preference name="android-minSdkVersion" value="22" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="Orientation" value="portrait" />
+    
+    <!-- Adicionar plugin de geolocalização -->
+    <plugin name="cordova-plugin-geolocation" spec="^4.1.0" />
+
 </widget>
