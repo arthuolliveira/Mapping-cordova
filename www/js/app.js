@@ -252,3 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Pedido de permissão para localização (location.js)
+document.addEventListener("DOMContentLoaded", () => {
+    requestLocation();
+});
