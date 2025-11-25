@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Dashboard - Mapping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-screen">
+        
+        <div class="search-toolbar">
+            <div class="search-input-wrapper">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" placeholder="Pesquisar por um destino...">
+            </div>
+            <button class="menu-btn" onclick="openMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <div class="dashboard-screen">
+    
+    <div class="location-selector">
+        <div class="selector-container">
+            <div class="pin-icon-column">
+                <i class="fa-solid fa-circle origin-pin"></i>
+                <div class="separator-line"></div>
+                <i class="fa-solid fa-location-dot destination-pin"></i>
+            </div>
+            
+            <div class="input-column">
+                <div class="location-input-group">
+                    <input type="text" id="originLocation" placeholder="Seu Local Atual" value="Seu Local Atual">
+                </div>
+                <div class="location-input-group">
+                    <input type="text" id="destinationLocation" placeholder="Para onde você vai?">
+                </div>
+            </div>
+            
+            <button class="swap-btn" onclick="swapLocations()">
+                <i class="fa-solid fa-arrows-up-down"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="map-controls">
+    <button class="control-btn floor-selector-btn" onclick="toggleFloorList()">
+        <i class="fa-solid fa-layer-group"></i> 
+    </button>
+    
+    <button class="control-btn accessibility-btn" onclick="toggleAccessibilityLayer()">
+        <i class="fa-solid fa-wheelchair"></i>
+    </button>
+
+    <div class="floor-list" id="floorList">
+        <button class="floor-item active" data-floor="L1">L1</button>
+        <button class="floor-item" data-floor="L2">L2</button>
+        <button class="floor-item" data-floor="L3">L3</button>
+    </div>
+</div>
+
+        <div class="map-container">
+            <p> [Área do Mapa Google (Placeholder)] </p>
+        </div>
+
+        <div class="bottom-sheet" id="mainBottomSheet">
+    
+    <div class="sheet-handle" onclick="toggleSheet()">
+        <i class="fa-solid fa-chevron-up sheet-arrow"></i>
+    </div>
+    
+    <div class="card-content">
+        <div class="card-content">
+        <div class="card-header">
+            <h2 class="card-title">Shopping Salvador</h2>
+        </div>
+        <div class="card-options">
+            <a href="#" class="option-item" onclick="goToPage('stores.html')">
+                <div class="option-icon"><i class="fa-solid fa-store"></i></div>
+                <span>Lojas</span>
+            </a>
+            <a href="#" class="option-item" onclick="goToPage('parking.html')">
+                <div class="option-icon"><i class="fa-solid fa-square-parking"></i></div>
+                <span>Estacionamento</span>
+            </a>
+            <a href="#" class="option-item">
+                <div class="option-icon"><i class="fa-solid fa-ticket"></i></div>
+                <span>Promoções</span>
+            </a>
+        </div>
+    </div>
+    
+    <div class="expanded-content">
+        <h3 class="expanded-title">Detalhes e Serviços</h3>
+        <p>Esta é a área que se expande. Você pode colocar aqui a lista completa de lojas, horários de funcionamento, avaliações, etc.</p>
+        <p>Scrollable Content...</p>
+        <p>Scrollable Content...</p>
+        <p>Scrollable Content...</p>
+    </div>
+</div>
+</div>
+
+<div class="bottom-nav">
+        
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function openMenu() {
+            alert('Abrir Menu Lateral ou Configurações');
+        }
+    </script>
+</body>
+</html>

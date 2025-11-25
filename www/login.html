@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Login - Mapping</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-screen">
+        <h1 class="title">Bem-vindo<br>de volta!</h1>
+        <p class="description">
+            Antes de começar, nos informe<br>
+            qual o seu login:
+        </p>
+        
+        <div class="login-options">
+            <button class="btn-user" onclick="goToPage('user-login.html')">
+                <span class="btn-icon"><i class="fa-solid fa-user"></i></span>
+                Usuário
+            </button>
+            <button class="btn-user" onclick="loginAs('administrador')">
+                <span class="btn-icon"><i class="fa-solid fa-user-tie"></i></span>
+                Administrador
+            </button>
+            <button class="btn-user" onclick="loginAs('lojista')">
+                <span class="btn-icon"><i class="fa-solid fa-store"></i></span>
+                Lojista
+            </button>
+        </div>
+        
+        <button class="btn btn-back" onclick="goToPage('index.html')">← Voltar</button>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function loginAs(tipo) {
+            alert('Login como: ' + tipo);
+        }
+    </script>
+</body>
+</html>

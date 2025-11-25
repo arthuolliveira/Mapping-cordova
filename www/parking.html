@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Estacionamento - Mapping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="parking-screen">
+        
+        <div class="parking-map-display">
+            <p class="map-placeholder">[Visualização do Mapa de Vagas do Andar]</p>
+            
+            <div class="spot-layout-example">
+                <div class="spot available">A-01</div>
+                <div class="spot occupied">A-02</div>
+                <div class="spot occupied">A-03</div>
+                <div class="spot available">A-04</div>
+                <div class="spot available">A-05</div>
+            </div>
+
+            <button class="back-btn floating-back" onclick="goToPage('dashboard.html')">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+        </div>
+
+        <div class="current-spot-card">
+            <p class="card-label">Sua vaga</p>
+            <h2 class="card-spot-number" id="currentSpotNumber">G-47</h2>
+            <button class="btn btn-change-spot" onclick="openChangeSpotModal()">Mudar Vaga</button>
+        </div>
+
+        <div class="parking-bottom-bar">
+            <div class="search-input-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Buscar Estacionamento">
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function openChangeSpotModal() {
+            alert('Abrir tela para mudar ou confirmar a vaga.');
+        }
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>
