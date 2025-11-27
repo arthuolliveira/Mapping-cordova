@@ -1,5 +1,6 @@
 package com.mappingcordova.security;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
@@ -37,5 +38,28 @@ public class JwtService {
                 .setExpiration(exp)
                 .signWith(getSigningKey(), SignatureAlgorithm.HS256)
                 .compact();
+    }
+
+    private Claims extractAllClaims(String token) {
+        return Jwts.parserBuilder()
+                .setSigningKey(getSigningKey())
+                .build()
+                .parseClaimsJws(token)
+                .getBody();
+    }
+
+    public String extractSubject(String token) {
+        return extractAllClaims(token).getSubject();
+    }
+
+    public String extractRole(String token) {
+        Object r = extractAllClaims(token).get("role");
+        return r == null ? null : String.valueOf(r);
+    }
+
+    public boolean isTokenValid(String token) {
+        Claims claims = extractAllClaims(token);
+        Date exp = claims.getExpiration();
+        return exp == null || exp.after(new Date());
     }
 }
