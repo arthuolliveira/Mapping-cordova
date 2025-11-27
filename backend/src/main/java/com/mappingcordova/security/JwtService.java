@@ -20,12 +20,17 @@ public class JwtService {
     @Value("${jwt.expiration-seconds:86400}")
     private long expirationSeconds;
 
-    private Key getSigningKey() {
+    private Key cachedKey;
+
+    private synchronized Key getSigningKey() {
+        if (cachedKey != null) return cachedKey;
         if (secret == null || secret.isBlank()) {
-            return Keys.secretKeyFor(SignatureAlgorithm.HS256);
+            cachedKey = Keys.secretKeyFor(SignatureAlgorithm.HS256);
+        } else {
+            byte[] keyBytes = Decoders.BASE64.decode(secret);
+            cachedKey = Keys.hmacShaKeyFor(keyBytes);
         }
-        byte[] keyBytes = Decoders.BASE64.decode(secret);
-        return Keys.hmacShaKeyFor(keyBytes);
+        return cachedKey;
     }
 
     public String generateToken(String subject, Map<String, Object> claims) {
