@@ -14,6 +14,32 @@ function goBack() {
 }
 
 const API_URL = 'http://localhost:3000/api';
+const BACKEND_URL = 'http://localhost:8080';
+
+async function login(email, password) {
+    const res = await fetch(`${BACKEND_URL}/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+    });
+    if (!res.ok) {
+        const err = await res.text();
+        throw new Error(err || 'Falha no login');
+    }
+    const data = await res.json();
+    localStorage.setItem('token', data.token);
+    localStorage.setItem('role', data.role);
+    const role = data.role;
+    if (role === 'ADMIN') {
+        window.location.href = 'admin-dashboard.html';
+        return;
+    }
+    if (role === 'STORE') {
+        window.location.href = 'lojista-menu.html';
+        return;
+    }
+    window.location.href = 'dashboard.html';
+}
 
 async function callAPI(endpoint, method = 'GET', data = null) {
     try {
