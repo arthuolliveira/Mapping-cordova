@@ -304,6 +304,26 @@ function toggleAccessibilityLayer() {
     
     // (Implementar a lógica real de mapa aqui)
 }
+let overlays = {
+    L1: null,
+    L2: null,
+    L3: null
+};
+
+let activeFloor = null;
+
+function showFloor(floor) {
+    // remover o overlay atual
+    for (const key of Object.keys(overlays)) {
+        if (overlays[key]) overlays[key].setMap(null);
+    }
+
+    // aplicar o novo
+    if (overlays[floor]) {
+        overlays[floor].setMap(map);
+        activeFloor = floor;
+    }
+}
 
 // --- 3. Lógica para Selecionar Andar ---
 
