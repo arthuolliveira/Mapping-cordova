@@ -1,3 +1,8 @@
+document.addEventListener('deviceready', async () => {
+    // Carrega o modal uma única vez em todas as páginas
+    await LocationModal.injectIfNeeded();
+});
+
 document.addEventListener('deviceready', onDeviceReady, false);
 // --- Controle de Permissão de Localização ---
 
@@ -184,13 +189,38 @@ function loginAs(profileType) {
 }
 
 const sheet = document.getElementById('mainBottomSheet');
-let isExpanded = false;
-function toggleSheet() {
-    isExpanded = !isExpanded;
-    sheet.classList.toggle('expanded', isExpanded);
-    document.body.style.overflow = isExpanded ? 'hidden' : 'auto';
-}
 
+if (sheet) {
+
+    let isExpanded = false;
+
+    function toggleSheet() {
+        isExpanded = !isExpanded;
+        sheet.classList.toggle('expanded', isExpanded);
+        document.body.style.overflow = isExpanded ? 'hidden' : 'auto';
+    }
+
+    let startY;
+    let currentY;
+
+    sheet.addEventListener('touchstart', (e) => {
+        if (e.target.closest('.sheet-handle')) {
+            startY = e.touches[0].clientY;
+            sheet.style.transition = 'none';
+        }
+    }, { passive: true });
+
+    sheet.addEventListener('touchmove', (e) => {
+        if (startY === undefined) return;
+
+        currentY = e.touches[0].clientY;
+        const diff = currentY - startY;
+        const newTranslateY = Math.max(0, diff);
+
+        sheet.style.transform = `translateY(${newTranslateY}px)`;
+    }, { passive: true });
+
+}
 
 let startY;
 let currentY;
