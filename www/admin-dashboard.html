@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Admin - Mapping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="admin-dashboard-screen">
+        
+        <div class="admin-header">
+            <h1 class="admin-title">Painel Administrativo</h1>
+            <button class="logout-btn" onclick="goToPage('login.html')">
+                <i class="fa-solid fa-sign-out-alt"></i>
+            </button>
+        </div>
+
+        <div class="admin-options-grid">
+            
+            <button class="admin-option-card" onclick="alert('Gerenciar Lojas')">
+                <i class="fa-solid fa-store card-icon"></i>
+                <span class="card-label">Lojas</span>
+            </button>
+            
+            <button class="admin-option-card" onclick="alert('Gerenciar Usuários')">
+                <i class="fa-solid fa-users card-icon"></i>
+                <span class="card-label">Usuários</span>
+            </button>
+
+            <button class="admin-option-card" onclick="alert('Configurar Mapas')">
+                <i class="fa-solid fa-map-location-dot card-icon"></i>
+                <span class="card-label">Mapas e Rotas</span>
+            </button>
+
+            <button class="admin-option-card" onclick="alert('Ver Relatórios')">
+                <i class="fa-solid fa-chart-line card-icon"></i>
+                <span class="card-label">Relatórios</span>
+            </button>
+            
+            <button class="admin-option-card" onclick="alert('Gerenciar Estacionamento')">
+                <i class="fa-solid fa-square-parking card-icon"></i>
+                <span class="card-label">Estacionamento</span>
+            </button>
+            
+            <button class="admin-option-card" onclick="alert('Gerenciar Promoções')">
+                <i class="fa-solid fa-percent card-icon"></i>
+                <span class="card-label">Promoções</span>
+            </button>
+        </div>
+        
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // A função goToPage já existe no app.js
+    </script>
+</body>
+</html>

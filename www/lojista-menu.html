@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Menu Lojista - Mapping</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="lojista-body">
+    <div class="lojista-menu-screen">
+        <div class="lojista-header">
+            <div class="lojista-profile">
+                <div class="lojista-avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <span class="lojista-name">Nome</span>
+            </div>
+        </div>
+        <div class="lojista-menu-content">
+            <button class="lojista-menu-btn" onclick="goToPage('editar-promocoes.html')">
+                <i class="fa-solid fa-tag"></i>
+                EDITAR PROMOÇÕES
+            </button>
+
+            <button class="lojista-menu-btn" onclick="goToPage('cadastrar-produtos.html')">
+                <i class="fa-solid fa-plus-circle"></i>
+                CADASTRAR PRODUTOS
+            </button>
+
+            <button class="lojista-menu-btn" onclick="goToPage('editar-produto.html')">
+                <i class="fa-solid fa-pen-to-square"></i>
+                EDITAR PRODUTO
+            </button>
+        </div>
+    </div>
+
+    <script src="cordova.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

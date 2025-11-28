@@ -1087,3 +1087,1808 @@ input::placeholder {
     height: 100%;
     object-fit: cover;
 }
+
+/* === TELA DE PAINEL DE ADMINISTRAÇÃO === */
+
+.admin-dashboard-screen {
+    background: #f4f4f4;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    flex-shrink: 0;
+}
+
+.admin-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logout-btn {
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.admin-options-grid {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.admin-option-card {
+    background: white;
+    border: none;
+    border-radius: 12px;
+    padding: 20px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    min-height: 120px;
+}
+
+.admin-option-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    font-size: 40px;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.card-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #7ED957 0%, #4CAF50 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* === TELA DE BEM-VINDO === */
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.welcome-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.car-svg {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.car-svg path {
+    fill: #000;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.welcome-to {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    line-height: 1;
+}
+
+.brand-name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+    line-height: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.car-icon {
+    font-size: 40px;
+    color: #000;
+}
+
+.car-icon i {
+    color: #000;
+}
+
+.subtitle {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 60px;
+    line-height: 1.5;
+}
+
+.btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background: #A8E063;
+    color: #000;
+}
+
+.btn-secondary {
+    background: #7ED957;
+    color: #000;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* === TELA DE CADASTRO === */
+.register-screen {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.description {
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 12px 15px;
+    gap: 10px;
+}
+
+.input-icon {
+    font-size: 18px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+}
+
+.input-icon i {
+    color: #000;
+}
+
+input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 12px;
+    color: #000;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 2px;
+    flex: none;
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-group a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.next-step {
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* === TELA DE CONFIRMAÇÃO === */
+.confirm-screen {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.confirm-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.code-input {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.code-box {
+    width: 40px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    flex: none;
+}
+
+.btn-dark {
+    background: #333;
+    color: white;
+}
+
+/* === TELA DE LOGIN === */
+.login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin: 40px 0;
+}
+
+.btn-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    background: #7ED957;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #000;
+}
+
+.btn-user:active {
+    transform: scale(0.98);
+}
+
+.btn-icon {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-icon i {
+    color: #000;
+}
+
+.btn-back {
+    background: #DDD;
+    color: #333;
+    max-width: 200px;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 360px) {
+    .code-box {
+        width: 35px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+}
+
+/* === TELA DE LOGIN ADMIN (DARK) === */
+.dark-body {
+    background: #2C2C2C;
+}
+
+.admin-login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.admin-welcome {
+    margin-bottom: 30px;
+}
+
+.admin-welcome-text {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.admin-title {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.admin-title i {
+    font-size: 28px;
+}
+
+.admin-subtitle {
+    color: #CCCCCC;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.admin-form {
+    width: 100%;
+    max-width: 320px;
+}
+
+.admin-input-group {
+    position: relative;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.admin-input-icon {
+    color: #666;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.admin-input {
+    flex: 1;
+    padding: 15px 0;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 14px;
+    outline: none;
+}
+
+.admin-input::placeholder {
+    color: #999;
+}
+
+.btn-admin-login {
+    width: 100%;
+    padding: 15px;
+    background: #E8E8E8;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.btn-admin-login:active {
+    transform: scale(0.98);
+    background: #D0D0D0;
+}
+
+.btn-admin-back {
+    width: 100%;
+    padding: 15px;
+    background: #FFFFFF;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.btn-admin-back:active {
+    transform: scale(0.98);
+    background: #F0F0F0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #7ED957 0%, #4CAF50 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* === TELA DE BEM-VINDO === */
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.welcome-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.car-svg {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.car-svg path {
+    fill: #000;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.welcome-to {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    line-height: 1;
+}
+
+.brand-name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+    line-height: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.car-icon {
+    font-size: 40px;
+    color: #000;
+}
+
+.car-icon i {
+    color: #000;
+}
+
+.subtitle {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 60px;
+    line-height: 1.5;
+}
+
+.btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background: #A8E063;
+    color: #000;
+}
+
+.btn-secondary {
+    background: #7ED957;
+    color: #000;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* === TELA DE CADASTRO === */
+.register-screen {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.description {
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 12px 15px;
+    gap: 10px;
+}
+
+.input-icon {
+    font-size: 18px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+}
+
+.input-icon i {
+    color: #000;
+}
+
+input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 12px;
+    color: #000;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 2px;
+    flex: none;
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-group a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.next-step {
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* === TELA DE CONFIRMAÇÃO === */
+.confirm-screen {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.confirm-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.code-input {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.code-box {
+    width: 40px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    flex: none;
+}
+
+.btn-dark {
+    background: #333;
+    color: white;
+}
+
+/* === TELA DE LOGIN === */
+.login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin: 40px 0;
+}
+
+.btn-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    background: #7ED957;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #000;
+}
+
+.btn-user:active {
+    transform: scale(0.98);
+}
+
+.btn-icon {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-icon i {
+    color: #000;
+}
+
+.btn-back {
+    background: #DDD;
+    color: #333;
+    max-width: 200px;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 360px) {
+    .code-box {
+        width: 35px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+}
+
+/* === TELA DE LOGIN ADMIN (DARK) === */
+.dark-body {
+    background: #2C2C2C;
+}
+
+.admin-login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.admin-welcome {
+    margin-bottom: 30px;
+}
+
+.admin-welcome-text {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.admin-title {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.admin-title i {
+    font-size: 28px;
+}
+
+.admin-subtitle {
+    color: #CCCCCC;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.admin-form {
+    width: 100%;
+    max-width: 320px;
+}
+
+.admin-input-group {
+    position: relative;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.admin-input-icon {
+    color: #666;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.admin-input {
+    flex: 1;
+    padding: 15px 0;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 14px;
+    outline: none;
+}
+
+.admin-input::placeholder {
+    color: #999;
+}
+
+.btn-admin-login {
+    width: 100%;
+    padding: 15px;
+    background: #E8E8E8;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.btn-admin-login:active {
+    transform: scale(0.98);
+    background: #D0D0D0;
+}
+
+.btn-admin-back {
+    width: 100%;
+    padding: 15px;
+    background: #FFFFFF;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.btn-admin-back:active {
+    transform: scale(0.98);
+    background: #F0F0F0;
+}
+
+/* === TELA DE LOGIN LOJISTA (GREEN DARK) === */
+.lojista-body {
+    background: linear-gradient(180deg, #2D5016 0%, #1A3D0F 100%);
+}
+
+.lojista-login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.lojista-welcome {
+    margin-bottom: 30px;
+}
+
+.lojista-welcome-text {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.lojista-title {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.lojista-title i {
+    font-size: 28px;
+}
+
+.lojista-subtitle {
+    color: #CCCCCC;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.lojista-form {
+    width: 100%;
+    max-width: 320px;
+}
+
+.lojista-input-group {
+    position: relative;
+    margin-bottom: 20px;
+    background: rgba(168, 224, 99, 0.4);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.lojista-input-icon {
+    color: #1A3D0F;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.lojista-input {
+    flex: 1;
+    padding: 15px 0;
+    border: none;
+    background: transparent;
+    color: #000;
+    font-size: 14px;
+    outline: none;
+}
+
+.lojista-input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.btn-lojista-login {
+    width: 100%;
+    padding: 15px;
+    background: #A8E063;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.btn-lojista-login:active {
+    transform: scale(0.98);
+    background: #95C956;
+}
+
+.btn-lojista-back {
+    width: 100%;
+    padding: 15px;
+    background: #FFFFFF;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.btn-lojista-back:active {
+    transform: scale(0.98);
+    background: #F0F0F0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(180deg, #7ED957 0%, #4CAF50 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* === TELA DE BEM-VINDO === */
+.welcome-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.welcome-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.car-svg {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.car-svg path {
+    fill: #000;
+}
+
+.welcome-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.welcome-to {
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    line-height: 1;
+}
+
+.brand-name {
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+    line-height: 1;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 32px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 40px;
+}
+
+.car-icon {
+    font-size: 40px;
+    color: #000;
+}
+
+.car-icon i {
+    color: #000;
+}
+
+.subtitle {
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 60px;
+    line-height: 1.5;
+}
+
+.btn {
+    width: 100%;
+    max-width: 300px;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background: #A8E063;
+    color: #000;
+}
+
+.btn-secondary {
+    background: #7ED957;
+    color: #000;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.link {
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* === TELA DE CADASTRO === */
+.register-screen {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 20px 0;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #000;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.description {
+    color: #000;
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 12px 15px;
+    gap: 10px;
+}
+
+.input-icon {
+    font-size: 18px;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+}
+
+.input-icon i {
+    color: #000;
+}
+
+input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #000;
+    font-size: 14px;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 20px 0;
+    font-size: 12px;
+    color: #000;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 2px;
+    flex: none;
+    width: 18px;
+    height: 18px;
+}
+
+.checkbox-group a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.next-step {
+    color: #000;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* === TELA DE CONFIRMAÇÃO === */
+.confirm-screen {
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.confirm-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.code-input {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.code-box {
+    width: 40px;
+    height: 50px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background: white;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    flex: none;
+}
+
+.btn-dark {
+    background: #333;
+    color: white;
+}
+
+/* === TELA DE LOGIN === */
+.login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 300px;
+    margin: 40px 0;
+}
+
+.btn-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    background: #7ED957;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: #000;
+}
+
+.btn-user:active {
+    transform: scale(0.98);
+}
+
+.btn-icon {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-icon i {
+    color: #000;
+}
+
+.btn-back {
+    background: #DDD;
+    color: #333;
+    max-width: 200px;
+}
+
+/* === RESPONSIVO === */
+@media (max-width: 360px) {
+    .code-box {
+        width: 35px;
+        height: 45px;
+        font-size: 20px;
+    }
+    
+    .title {
+        font-size: 24px;
+    }
+}
+
+/* === TELA DE LOGIN ADMIN (DARK) === */
+.dark-body {
+    background: #2C2C2C;
+}
+
+.admin-login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.admin-welcome {
+    margin-bottom: 30px;
+}
+
+.admin-welcome-text {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.admin-title {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.admin-title i {
+    font-size: 28px;
+}
+
+.admin-subtitle {
+    color: #CCCCCC;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.admin-form {
+    width: 100%;
+    max-width: 320px;
+}
+
+.admin-input-group {
+    position: relative;
+    margin-bottom: 20px;
+    background: #FFFFFF;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.admin-input-icon {
+    color: #666;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.admin-input {
+    flex: 1;
+    padding: 15px 0;
+    border: none;
+    background: transparent;
+    color: #333;
+    font-size: 14px;
+    outline: none;
+}
+
+.admin-input::placeholder {
+    color: #999;
+}
+
+.btn-admin-login {
+    width: 100%;
+    padding: 15px;
+    background: #E8E8E8;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.btn-admin-login:active {
+    transform: scale(0.98);
+    background: #D0D0D0;
+}
+
+.btn-admin-back {
+    width: 100%;
+    padding: 15px;
+    background: #FFFFFF;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.btn-admin-back:active {
+    transform: scale(0.98);
+    background: #F0F0F0;
+}
+
+/* === TELA DE LOGIN LOJISTA (GREEN DARK) === */
+.lojista-body {
+    background: linear-gradient(180deg, #2D5016 0%, #1A3D0F 100%);
+}
+
+.lojista-login-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.lojista-welcome {
+    margin-bottom: 30px;
+}
+
+.lojista-welcome-text {
+    color: #FFFFFF;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.lojista-title {
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.lojista-title i {
+    font-size: 28px;
+}
+
+.lojista-subtitle {
+    color: #CCCCCC;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+.lojista-form {
+    width: 100%;
+    max-width: 320px;
+}
+
+.lojista-input-group {
+    position: relative;
+    margin-bottom: 20px;
+    background: rgba(168, 224, 99, 0.4);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.lojista-input-icon {
+    color: #1A3D0F;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.lojista-input {
+    flex: 1;
+    padding: 15px 0;
+    border: none;
+    background: transparent;
+    color: #000;
+    font-size: 14px;
+    outline: none;
+}
+
+.lojista-input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.btn-lojista-login {
+    width: 100%;
+    padding: 15px;
+    background: #A8E063;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: all 0.3s;
+}
+
+.btn-lojista-login:active {
+    transform: scale(0.98);
+    background: #95C956;
+}
+
+.btn-lojista-back {
+    width: 100%;
+    padding: 15px;
+    background: #FFFFFF;
+    color: #333;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: all 0.3s;
+}
+
+.btn-lojista-back:active {
+    transform: scale(0.98);
+    background: #F0F0F0;
+}
+
+/* === TELA DE MENU LOJISTA === */
+.lojista-menu-screen {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.lojista-header {
+    background: #FFFFFF;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lojista-profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.lojista-avatar {
+    width: 50px;
+    height: 50px;
+    background: #E0E0E0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #666;
+}
+
+.lojista-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.lojista-menu-content {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.lojista-menu-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 18px 30px;
+    background: #E8E8E8;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.lojista-menu-btn i {
+    font-size: 18px;
+}
+
+.lojista-menu-btn:active {
+    transform: scale(0.98);
+    background: #D0D0D0;
+}
