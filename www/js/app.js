@@ -1,7 +1,7 @@
-document.addEventListener('deviceready', async () => {
-    // Carrega o modal uma única vez em todas as páginas
-    await LocationModal.injectIfNeeded();
-});
+// document.addEventListener('deviceready', async () => {
+//     // Carrega o modal uma única vez em todas as páginas
+//     await LocationModal.injectIfNeeded();
+// });
 
 document.addEventListener('deviceready', onDeviceReady, false);
 // --- Controle de Permissão de Localização ---

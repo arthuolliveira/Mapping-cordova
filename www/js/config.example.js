@@ -1,0 +1,3 @@
+window.APP_CONFIG = {
+    MAPS_KEY: "INSIRA_SUA_API_KEY_AQUI"
+};
